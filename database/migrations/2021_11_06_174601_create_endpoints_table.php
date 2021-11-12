@@ -14,6 +14,7 @@ class CreateEndpointsTable extends Migration
     public function up()
     {
         Schema::create('endpoints', function (Blueprint $table) {
+            $table->primary(['route_id', 'station_id', 'direction', 'a_time']);
             $table->id('route_id');
             $table->id('station_id');
             $table->string('direction');
