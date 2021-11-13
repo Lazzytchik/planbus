@@ -14,7 +14,7 @@ class CreateStopsTable extends Migration
     public function up()
     {
         Schema::create('stops', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->char('name');
             $table->text('comment');
             $table->timestamps();

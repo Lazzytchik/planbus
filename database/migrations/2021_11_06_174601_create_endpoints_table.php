@@ -15,12 +15,19 @@ class CreateEndpointsTable extends Migration
     {
         Schema::create('endpoints', function (Blueprint $table) {
             $table->primary(['route_id', 'station_id', 'direction', 'a_time']);
-            $table->id('route_id');
-            $table->id('station_id');
+            $table->integer('route_id')->unsigned();
+            $table->integer('station_id')->unsigned();
             $table->string('direction');
             $table->time('a_time');
             $table->text('comment');
             $table->timestamps();
+
+            $table->foreign('route_id')->references('id')->on('routes')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+            $table->foreign('station_id')->references('stop_id')->on('stations')
+                ->onDelete('restrict')
+                ->onUpdate('cascade');
         });
     }
 
