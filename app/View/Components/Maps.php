@@ -6,14 +6,17 @@ use Illuminate\View\Component;
 
 class Maps extends Component
 {
+    public string $from;
+    public string $to;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($from, $to)
     {
-        //
+        $this->from = $from;
+        $this->to = $to;
     }
 
     /**
@@ -23,6 +26,6 @@ class Maps extends Component
      */
     public function render()
     {
-        return view('components.maps');
+        return view('components.maps', []);
     }
 }

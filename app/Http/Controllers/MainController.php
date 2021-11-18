@@ -13,7 +13,6 @@ class MainController extends Controller
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
         $cities = City::with('stations')->get();
-        //dd($cities);
         return view('pages.index');
     }
 }
