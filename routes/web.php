@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\MapsController;
+use App\Http\Controllers\ScheduleController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\MainController;
 
@@ -15,3 +18,6 @@ use \App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, 'index'])->name('main');
+Route::get('/maps', [MapsController::class, 'index'])->name('maps');
+Route::get('/schedules', [ScheduleController::class, 'index'])->name('schedule');
+Route::get('/about', [AboutController::class, 'index'])->name('about');

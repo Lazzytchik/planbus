@@ -4,13 +4,8 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class MainMenu extends Component
+class Maps extends Component
 {
-
-    public static array $links = [
-        'main' => 'Главная', 'maps' => 'Карты', 'schedule' => 'Расписания', 'about' =>' О нас'
-    ];
-
     /**
      * Create a new component instance.
      *
@@ -28,6 +23,6 @@ class MainMenu extends Component
      */
     public function render()
     {
-        return view('components.main-menu', ['links' => self::$links]);
+        return view('components.maps');
     }
 }

@@ -17,12 +17,11 @@
         </div>
     </div>
     <div class="main">
-
+        <div class="mt-5 mb-4 text-center">
+            <h1>@yield('title')</h1>
+            @yield('content')
+        </div>
     </div>
 </div>
-    <div class="mt-5 mb-4 text-center">
-        <h1>@yield('title')</h1>
-        @yield('content')
-    </div>
 </body>
 </html>
