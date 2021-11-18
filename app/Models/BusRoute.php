@@ -9,5 +9,13 @@ class BusRoute extends Model
 {
     protected $table = 'routes';
 
-    use HasFactory;
+    public function stops(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Path::class, 'route_id', 'id');
+    }
+
+    public function endpoints(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Endpoint::class, 'route_id', 'id');
+    }
 }
