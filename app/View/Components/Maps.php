@@ -26,6 +26,6 @@ class Maps extends Component
      */
     public function render()
     {
-        return view('components.maps', []);
+        return view('components.maps');
     }
 }
