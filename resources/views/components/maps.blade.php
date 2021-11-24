@@ -1,5 +1,4 @@
 <div class="maps-main">
-    <h1>Maps</h1>
     <div id="map" style="width: 600px; height: 400px"></div>
     <script type="text/javascript">
         // Функция ymaps.ready() будет вызвана, когда

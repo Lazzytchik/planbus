@@ -17,9 +17,15 @@
         </div>
     </div>
     <div class="main">
-        <div class="mt-5 mb-4 text-center">
-            <h1>@yield('title')</h1>
-            @yield('content')
+        <div class="main-section">
+            <div class="inner-main">
+                <div class="main-work-section">
+                    <h1>@yield('title')</h1>
+                    <div class="main-content">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
